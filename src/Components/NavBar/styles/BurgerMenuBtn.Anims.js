@@ -1,4 +1,6 @@
-@keyframes toggleTopLine {
+import {keyframes, css} from "styled-components"
+
+const TopLine = keyframes`
     0% {
         transform: translateY(0px) rotate(0deg);
     }
@@ -16,9 +18,8 @@
     100% {
         transform: translateY(11px) rotate(45deg);
     }
-}
-
-@keyframes toggleTopLineReverse {
+`
+const TopLineReverse = keyframes`
     0% {
         transform: translateY(11px) rotate(45deg);
     }
@@ -36,9 +37,8 @@
     100% {
         transform: translateY(0) rotate(0deg);
     }
-}
-
-@keyframes toggleMidLine {
+`
+const MidLine = keyframes`
     0% {
         opacity: 1;
     }
@@ -55,9 +55,8 @@
     100% {
         opacity: 0;
     }
-}
-
-@keyframes toggleMidLineReverse {
+`
+const MidLineReverse = keyframes`
     0% {
         opacity: 0;
     }
@@ -73,10 +72,11 @@
     100% {
         opacity: 1;
     }
-}
+`
 
-@keyframes toggleBottomLine {
-    0% {
+
+const BottomLine = keyframes`
+        0% {
         transform: translateY(0px) rotate(0deg);
     }
 
@@ -93,9 +93,10 @@
     100% {
         transform: translateY(-11px) rotate(-45deg);
     }
-}
 
-@keyframes toggleBottomLineReverse {
+`
+
+const BottomLineReverse = keyframes`
     0% {
         transform: translateY(-11px) rotate(-45deg);
     }
@@ -114,4 +115,23 @@
         transform: translateY(0) rotate(0deg);
     }
 
-}
+`
+export const AnimTopLine = css`
+    ${TopLine} 1s normal forwards;
+`
+export const AnimTopLineReverse = css`
+    ${TopLineReverse} 1s normal forwards;
+`
+export const AnimMidLine = css`
+    ${MidLine} 1s normal forwards;
+`
+export const AnimMidLineReverse = css`
+    ${MidLineReverse} 1s normal forwards;
+`
+export const AnimBottomLine = css`
+    ${BottomLine} 1s normal forwards;
+`
+export const AnimBottomLineReverse = css`
+        ${BottomLineReverse} 1s normal forwards;
+`
+    

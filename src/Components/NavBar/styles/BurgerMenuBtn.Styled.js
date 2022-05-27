@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import BurgerMenuBtn from "../BurgerMenuBtn";
-import './BurgerMenuBtn.Anims.css';
+import {
+    AnimBottomLine,
+    AnimBottomLineReverse,
+    AnimTopLine,
+    AnimTopLineReverse,
+    AnimMidLine,
+    AnimMidLineReverse 
+} from "./BurgerMenuBtn.Anims";
 
 const StyledBurgerMenuBtn = styled(BurgerMenuBtn)`
 
@@ -17,19 +24,16 @@ const StyledBurgerMenuBtn = styled(BurgerMenuBtn)`
 
         background-color: ${props => props.theme.colors.solid.white};
         transform-origin: center;
-
-        animation-fill-mode: forwards;
-        animation-duration: 1s;
     }
 
     div:first-child{
-        animation: ${({showMenu}) => (showMenu ? 'toggleTopLine' : 'toggleTopLineReverse')};
+        animation: ${({showMenu}) => (showMenu ? AnimTopLine : AnimTopLineReverse)};
     }
     div:not(:first-child):not(:last-child){
-        animation: ${({showMenu}) => (showMenu ? 'toggleMidLine' : 'toggleMidLineReverse')};
+        animation: ${({showMenu}) => (showMenu ? AnimMidLine : AnimMidLineReverse)};
     }
     div:last-child{
-        animation: ${({showMenu}) => (showMenu ? 'toggleBottomLine' : 'toggleBottomLineReverse')};
+        animation: ${({showMenu}) => (showMenu ? AnimBottomLine : AnimBottomLineReverse)};
     }
 
 `
