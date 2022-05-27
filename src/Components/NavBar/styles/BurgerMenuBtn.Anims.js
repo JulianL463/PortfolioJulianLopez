@@ -134,4 +134,3 @@ export const AnimBottomLine = css`
 export const AnimBottomLineReverse = css`
         ${BottomLineReverse} 1s normal forwards;
 `
-    

@@ -16,13 +16,15 @@ const StyledToggleBtn = styled(ToggleBtn)`
         aspect-ratio:2;
         border-radius: 25px;
         background-color: ${porps => porps.theme.colors.solid.white};
+        box-shadow: 0 4px 4px ${props => props.theme.colors.transp.dark} inset;
+
 
 
         div{
             position:relative;
 
             height:100%;
-            width: ${({isActive}) => (isActive ? '100%' : '50%')};
+            width: ${({isActive}) => (isActive ? '100%' : 'calc(100%/2)')};
 
             border-radius: 12px;
             background-color: ${porps => porps.theme.colors.solid.mid};

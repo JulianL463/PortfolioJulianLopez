@@ -25,6 +25,12 @@ const StyledGlobals = createGlobalStyle`
     h4,
     p{
         margin:0;
+    }
+
+    h2,
+    h3,
+    h4,
+    p{
         text-shadow: 0 0 5px ${props => props.theme.colors.transp.dark};
     }
 
