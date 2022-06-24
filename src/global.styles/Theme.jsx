@@ -15,20 +15,22 @@ const theme = {
             dark: `rgb(${dark})`
         },
         transp: {
+            white: `rgba(${white}, 0.7)`,
             light: `rgba(${light}, 0.7)`,
             mid: `rgba(${mid}, 0.7)`,
             dark: `rgba(${dark}, 0.7)`
         },
         grad: {
-            light: `linear-gradient(0deg, rgb(${mid}) 0%, rgba(${light}) 100%)`,
+            light: `linear-gradient(0deg, rgb(${mid}) 80%, rgba(${light}) 20%)`,
+            lightReverse: `linear-gradient(180deg, rgb(${mid}) 20%, rgba(${light}) 80%)`,
             lightFadeDown:`linear-gradient(0deg, rgba(0,0,0,0) 15%, rgba(${light}) 100%)`,
-            dark: `linear-gradient(0deg, rgb(${dark}) 0%, rgba(${mid}) 50%)`,
-            darkReverse: `linear-gradient(180deg, rgb(${dark}) 0%, rgba(${mid}) 50%)`,
+            dark: `linear-gradient(0deg, rgb(${dark}) 0%, rgba(${mid}) 90%)`,
+            darkReverse: `linear-gradient(180deg, rgb(${dark}) 0%, rgba(${mid}) 90%)`,
         }
     },
     font: {
         size: {
-            s: '1rem',
+            s: '0.95rem',
             m: '1.2rem',
             l: '2rem',
             xl: '15rem'

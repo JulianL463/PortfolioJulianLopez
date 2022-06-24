@@ -5,9 +5,10 @@ const StyledTitle = styled(Title)`
     position:absolute;
     width:100%;
     text-align:center;
+    z-index:-1;
 
     h1{
-        background: linear-gradient(0deg, rgba(0,0,0,0) 15%, rgba(142, 185, 250) 100%);
+        background: ${(props) => props.theme.colors.grad.lightFadeDown};
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; 
     }

@@ -31,7 +31,7 @@ const StyledGlobals = createGlobalStyle`
     h3,
     h4,
     p{
-        text-shadow: 0 0 5px ${props => props.theme.colors.transp.dark};
+        text-shadow: 0 0 4px ${props => props.theme.colors.solid.dark};
     }
 
     h1{
@@ -80,6 +80,11 @@ const StyledGlobals = createGlobalStyle`
         display:block;
     }
 
+    .icons img{
+        -webkit-filter: drop-shadow(0px 0px 5px ${props => props.theme.colors.transp.dark});
+        filter: drop-shadow(0px 0px 5px ${props => props.theme.colors.transp.dark});
+    }
+
     @media (prefers-reduced-motion: reduce){
         *,
         *::before,
@@ -94,7 +99,7 @@ const StyledGlobals = createGlobalStyle`
     // Utilities //
 
     .dropShadow{
-        box-shadow: 0 0 10px ${props => props.theme.colors.transp.dark};  
+        box-shadow: 0 0 15px ${props => props.theme.colors.transp.dark};  
     }
     .glow{
         box-shadow: 0 0 30px ${props => props.theme.colors.transp.light};  
